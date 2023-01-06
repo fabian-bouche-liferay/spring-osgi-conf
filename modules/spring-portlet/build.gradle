@@ -1,0 +1,27 @@
+buildscript {
+	dependencies {
+		classpath group: "com.liferay", name: "com.liferay.css.builder", version: "3.0.2"
+		classpath group: "com.liferay", name: "com.liferay.gradle.plugins.css.builder", version: "5.0.1"
+	}
+
+	repositories {
+		maven {
+			url "https://repository-cdn.liferay.com/nexus/content/groups/public"
+		}
+	}
+}
+
+apply plugin: "com.liferay.css.builder"
+
+dependencies {
+	compileOnly group: "com.liferay.portal", name: "release.dxp.api"
+	cssBuilder group: "com.liferay", name: "com.liferay.css.builder", version: "3.0.2"
+
+	compile group: 'com.liferay.portletmvc4spring', name: 'com.liferay.portletmvc4spring.framework', version: '5.3.2'
+	compile group: 'com.liferay.portletmvc4spring', name: 'com.liferay.portletmvc4spring.security', version: '5.3.2'
+
+	compileOnly project(":modules:some-configuration")
+	compileOnly group: "org.slf4j", name: "slf4j-api"
+
+	portalCommonCSS group: "com.liferay", name: "com.liferay.frontend.css.common"
+}

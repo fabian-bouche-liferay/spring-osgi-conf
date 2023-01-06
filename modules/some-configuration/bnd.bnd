@@ -1,0 +1,4 @@
+Bundle-Name: some-configuration
+Bundle-SymbolicName: com.liferay.samples.fbo.some.configuration
+Bundle-Version: 1.0.0
+Export-Package: com.liferay.samples.fbo.some.configuration
